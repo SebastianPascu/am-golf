@@ -1,0 +1,6 @@
+{
+  "email" : "abcd@yahoo.com",
+  "password" : "random",
+  "invalidEmail" : "invalid@email.com",
+  "invalidPassword" : "invalidpass"
+}

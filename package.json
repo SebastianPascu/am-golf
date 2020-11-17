@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "npx cypress open",
+    "cy:run:chrome": "npx cypress run --browser=chrome",
+    "cy:run:dashboard": "cypress run --record --key 029e362d-9df6-4a28-90f0-8723bbc128aa --browser=chrome"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/SebastianPascu/am-golf/issues"
   },
-  "homepage": "https://github.com/SebastianPascu/am-golf#readme"
+  "homepage": "https://github.com/SebastianPascu/am-golf#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  }
 }

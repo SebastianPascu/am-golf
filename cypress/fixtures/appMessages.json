@@ -1,0 +1,4 @@
+{
+    "loginErrorMessage" : "Your email address or password are incorrect. Please try again.",
+    "emailMandatoryMessage" : "This field is mandatory"
+}

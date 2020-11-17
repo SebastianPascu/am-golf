@@ -1,4 +1,5 @@
 {
     "loginErrorMessage" : "Your email address or password are incorrect. Please try again.",
-    "emailMandatoryMessage" : "This field is mandatory"
+    "emailMandatoryMessage" : "This field is mandatory",
+    "welcomeMessage" : "What would you like to do today?"
 }

@@ -15,18 +15,16 @@ beforeEach(() => {
 
 describe('Verify login flows', () => {
     it('Should successfully log in with correct login email and password', () => {
-        cy.fixture('userDetails').then((user) => {
-            amGolfLoginPage.updateLoginForm(user.email, user.password);
-        });
-        amGolfLoginPage.submitlogin();
-        //validation for login
+        amGolfLoginPage.updateLoginForm(Cypress.env('email'), Cypress.env('password'));
+        amGolfLoginPage.submitLogin();
+        amGolfLoginPage.verifySuccessfullyLoggedIn();
     })
 
     it('Should fail the log in with incorect email and incorect password', () => {
         cy.fixture('userDetails').then((user) => {
             amGolfLoginPage.updateLoginForm(user.invalidEmail, user.invalidPassword);
         });
-        amGolfLoginPage.submitlogin();
+        amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifyFailedLogin();
     })
 
@@ -34,7 +32,7 @@ describe('Verify login flows', () => {
         cy.fixture('userDetails').then((user) => {
             amGolfLoginPage.updateLoginForm(user.invalidEmail, user.password);
         });
-        amGolfLoginPage.submitlogin();
+        amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifyFailedLogin();
     })
 
@@ -42,9 +40,18 @@ describe('Verify login flows', () => {
         cy.fixture('userDetails').then((user) => {
             amGolfLoginPage.updateLoginForm(user.email, user.invalidPassword);
         });
-        amGolfLoginPage.submitlogin();
+        amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifyFailedLogin();
     })
+
+    // it('Sabacasadd', () => {
+    //     amGolfLoginPage.loginOnBackEnd()
+    //     // amGolfLoginPage.submitLogin();
+    //     // amGolfLoginPage.verifyFailedLogin();
+    //     cy.visit('am.golf/home.amg.html');
+    //     amGolfLoginPage.verifySuccessfullyLoggedIn();
+    //     cy.wait(15000);
+    // })
 })
 
 describe('Verify login form elements visibility', () => {
@@ -55,12 +62,12 @@ describe('Verify login form elements visibility', () => {
 
 describe('Verify login form elements validation', () => {
     it('Should not be able to login with empty fields', () => {
-        amGolfLoginPage.submitlogin();
+        amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifyFailedLogin();
     })
 
     it('Should be mandatory the email field', () => {
-        amGolfLoginPage.submitlogin();
+        amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifyLoginFormRequiredField();
     })
 })

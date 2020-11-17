@@ -9,6 +9,10 @@
     "baseUrl": "http://dev.am.golf/",
     "chromeWebSecurity": false,
     "env": {
-        "environment": "DEV"
+        "environment": "DEV",
+        "email": "dev@am.golf",
+        "password": "Test1!",
+        "authEndpoint": "http://dev.am.golf/am.golf/session.amg.model",
+        "homePageEndpoint": "http://dev.am.golf/am.golf/home.amg.html"
     }
 }

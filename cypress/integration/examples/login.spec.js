@@ -43,15 +43,6 @@ describe('Verify login flows', () => {
         amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifyFailedLogin();
     })
-
-    // it('Sabacasadd', () => {
-    //     amGolfLoginPage.loginOnBackEnd()
-    //     // amGolfLoginPage.submitLogin();
-    //     // amGolfLoginPage.verifyFailedLogin();
-    //     cy.visit('am.golf/home.amg.html');
-    //     amGolfLoginPage.verifySuccessfullyLoggedIn();
-    //     cy.wait(15000);
-    // })
 })
 
 describe('Verify login form elements visibility', () => {

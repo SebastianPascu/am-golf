@@ -18,6 +18,7 @@ export class Login {
     }
 
     navigateToBaseUrl() {
+        cy.clearCookies();
         cy.visit('/');
     }
 

@@ -21,6 +21,13 @@ describe('Players tab accesability', () => {
         amGolfLoginPage.navigateToBaseUrl();
         playersPage.selectPlayersTab();
     })
+
+    it('Verify Players page can be accessed by selecting Players tab', () => {
+        amGolfLoginPage.loginOnBackEnd();
+        amGolfLoginPage.navigateToBaseUrl();
+        playersPage.selectPlayersTab();
+        expect(true).to.eq(false);
+    })
 })
 
 

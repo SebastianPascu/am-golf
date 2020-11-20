@@ -8,6 +8,7 @@
     "waitForAnimations": true,
     "baseUrl": "http://dev.am.golf/",
     "chromeWebSecurity": false,
+    "reporter": "cypress-mochawesome-reporter",
     "env": {
         "environment": "DEV",
         "email": "dev@am.golf",
@@ -15,5 +16,6 @@
         "authEndpoint": "http://dev.am.golf/am.golf/session.amg.model",
         "homePageEndpoint": "http://dev.am.golf/am.golf/home.amg.html",
         "playersEndpoint": "http://dev.am.golf/am.golf/people/list.amg.model"
-    }
+    },
+    "video": true
 }

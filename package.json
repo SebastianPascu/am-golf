@@ -9,7 +9,8 @@
     "cy:run:chrome": "npx cypress run --browser=chrome",
     "cy:open:dev": "npx cypress open --config-file cypress/config/cypress.DEV.json",
     "cy:run:dev": "npx cypress run --config-file cypress/config/cypress.DEV.json --browser=chrome",
-    "cy:run:dashboard": "cypress run --record --key 029e362d-9df6-4a28-90f0-8723bbc128aa --browser=chrome"
+    "cy:run:dashboard": "cypress run --record --key 029e362d-9df6-4a28-90f0-8723bbc128aa --config-file cypress/config/cypress.DEV.json --browser=chrome --headless",
+    "cypress:report": "generate-mochawesome-report"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "cypress": "^5.6.0"
+    "cypress": "^5.6.0",
+    "cypress-mochawesome-reporter": "^1.3.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0"
   }
 }

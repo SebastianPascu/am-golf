@@ -16,6 +16,7 @@ beforeEach(() => {
 describe('Verify login flows', () => {
     it('Should successfully log in with correct login email and password', () => {
         amGolfLoginPage.updateLoginForm(Cypress.env('email'), Cypress.env('password'));
+        cy.screenshot();
         amGolfLoginPage.submitLogin();
         amGolfLoginPage.verifySuccessfullyLoggedIn();
     })

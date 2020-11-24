@@ -10,4 +10,9 @@ export class Players {
         Tabs.players().click({force : true});
         PageElements.playerPageHeader().should('contain', 'Players');
     }
+
+    selectPlayer(playerName) {
+        debugger;
+        PageElements.infiniteScroll().scrollIntoView();
+    }
 }

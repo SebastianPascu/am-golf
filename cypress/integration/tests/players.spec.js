@@ -12,21 +12,29 @@ const playersPage = new Players();
 
 beforeEach(() => {
     amGolfLoginPage.loginOnBackEnd();
-    amGolfLoginPage.navigateToBaseUrl();
 })
 
 describe('Players tab accesability', () => {
     it('Verify Players page can be accessed by selecting Players tab', () => {
-        amGolfLoginPage.loginOnBackEnd();
         amGolfLoginPage.navigateToBaseUrl();
         playersPage.selectPlayersTab();
     })
 
     it('Verify Players page can be accessed by selecting Players tab', () => {
-        amGolfLoginPage.loginOnBackEnd();
         amGolfLoginPage.navigateToBaseUrl();
         playersPage.selectPlayersTab();
         expect(true).to.eq(false);
+    })
+
+    it('Verify Infinite Scrolling and select a hidden player', () => {
+        amGolfLoginPage.loginOnBackEnd();
+        cy.visit('/am.golf/people.amg.html');
+        // cy.contains('Igor Malaev').scrollIntoView();
+        // playersPage.selectPlayersTab();
+        // cy.window().scrollTo(0, 500);
+    //    cy.get('#main').scrollTo('bottom')
+        playersPage.selectPlayer('Igor Malaev');
+        
     })
 })
 

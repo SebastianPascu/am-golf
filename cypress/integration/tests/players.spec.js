@@ -11,12 +11,14 @@ const amGolfLoginPage = new Login();
 const playersPage = new Players();
 
 beforeEach(() => {
+    cy.viewport(1920, 1080);
     amGolfLoginPage.loginOnBackEnd();
 })
 
 describe('Players tab accesability', () => {
     it('Verify Players page can be accessed by selecting Players tab', () => {
         amGolfLoginPage.navigateToBaseUrl();
+        cy.wait(5000);
         playersPage.selectPlayersTab();
     })
 
